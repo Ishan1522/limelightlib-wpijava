@@ -127,7 +127,7 @@ public class LimelightHelpers {
     public static class LimelightTarget_Fiducial {
 
         @JsonProperty("fID")
-        public double fiducialID;
+        public int fiducialID;
 
         @JsonProperty("fam")
         public String fiducialFamily;
@@ -895,7 +895,7 @@ public class LimelightHelpers {
         return getLimelightNTDoubleArray(limelightName, "tc");
     }
 
-    public static double getFiducialID(String limelightName) {
+    public static int getFiducialID(String limelightName) {
         return getLimelightNTDouble(limelightName, "tid");
     }
 
@@ -1148,7 +1148,7 @@ public class LimelightHelpers {
     }
 
     public static void SetFiducialIDFiltersOverride(String limelightName, int[] validIDs) {
-        double[] validIDsDouble = new double[validIDs.length];
+        int[] validIDsDouble = new int[validIDs.length];
         for (int i = 0; i < validIDs.length; i++) {
             validIDsDouble[i] = validIDs[i];
         }        
